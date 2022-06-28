@@ -1,0 +1,76 @@
+@import '../../assets/css/mixin.scss';
+
+.product-card {
+  max-width: 26rem;
+  width: 26rem;
+  box-shadow: 0 0 0.4rem 0.1rem rgba(0, 0, 0, 0.1);
+  border-radius: 0.8rem;
+  margin-bottom: 4.9rem;
+  user-select: none;
+
+  &__box {
+  }
+
+  &__image {
+    width: 22.7rem;
+    height: 14rem;
+    margin: 0 auto;
+    padding: 1rem 1.6rem;
+    overflow: hidden;
+    cursor: pointer;
+    @include tablet {
+      width: 100%;
+      height: 20rem;
+      padding: 0;
+    }
+
+    & img {
+      width: 100%;
+      height: 100%;
+      transition: transform ease-in-out 0.3s;
+    }
+  }
+
+  &__box:hover &__image > img {
+    transform: scale(1.4);
+  }
+
+  &__info {
+  }
+
+  &__action {
+    @include flexItem(flex, space-evenly, center);
+    padding-bottom: 1rem;
+  }
+
+  &__name {
+    @include fontText(
+      1.6rem,
+      600,
+      2.7rem 2.5rem 1rem 2.5rem,
+      var(--colorTitle)
+    );
+    @include multilLine(2.5rem, 2, 1.7rem);
+  }
+
+  &__price {
+    color: var(--colorGray);
+    @include fontText(1.6rem, 400, 0 2.5rem 1.8rem, var(--colorGray));
+    line-height: 2.7rem;
+  }
+
+  &__button {
+    @include fontText(1.4rem, 400, 1rem 1.8rem, var(--colorWhite));
+    border: none;
+    border-radius: 0.8rem;
+    width: 9.4rem;
+    cursor: pointer;
+    &-update {
+      background-color: var(--colorButtonGreen);
+    }
+
+    &-delete {
+      background-color: var(--colorButtonRed);
+    }
+  }
+}

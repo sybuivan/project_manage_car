@@ -1,0 +1,6 @@
+@import '../../assets/css/mixin.scss';
+.manage-product {
+  &__head {
+    @include flexItem(flex, space-between, center);
+  }
+}

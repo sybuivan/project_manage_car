@@ -1,0 +1,70 @@
+@import '../../assets/css/mixin.scss';
+
+.product-detail {
+  &-head {
+    cursor: pointer;
+    padding-bottom: 3.6rem;
+    display: inline-block;
+
+    & svg {
+      @include fontText(2.7rem, 600, 0, var(--colorBlue));
+    }
+  }
+
+  &__images {
+    height: 30rem;
+  }
+
+  &__back {
+    background-color: transparent;
+    border: none;
+    @include flexItem(flex, center, center);
+    padding: 0;
+    @include fontText(1.8rem, 600, 0, var(--colorBlue));
+    cursor: pointer;
+  }
+
+  margin-top: 4.6rem;
+  border-radius: 2rem;
+  background-color: var(--colorWhite);
+  &-box {
+    padding: 3.2rem 5.6rem;
+  }
+
+  &__wrapper {
+    padding-bottom: 4.5rem;
+  }
+  &__info {
+    &-name {
+      @include fontText(1.8rem, 600, 0 0 2.1rem 0, var(--colorBlack));
+      display: block;
+    }
+
+    &-text {
+      @include fontText(1.4rem, 400, 0.5rem 0, var(--colorBlack));
+      line-height: 2.1rem;
+      letter-spacing: 0.35px;
+    }
+  }
+
+  &__suggest {
+    &-title {
+      @include fontText(1.4rem, 600, 2rem 0, var(--colorBlack));
+    }
+  }
+}
+
+.slick-dots {
+  & li {
+    & button::before {
+      font-size: 1.3rem;
+    }
+  }
+  & li.slick-active button:before {
+    color: var(--colorBlue);
+  }
+  & li button:focus:before,
+  & li button:hover:before {
+    color: var(--colorBlue);
+  }
+}

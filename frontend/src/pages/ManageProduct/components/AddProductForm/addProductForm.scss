@@ -1,0 +1,103 @@
+@import '../../../../assets/css/mixin.scss';
+
+.product-form {
+  width: 67.4rem;
+  background: var(--colorWhite);
+  border-radius: 0.8rem;
+  overflow-y: scroll;
+
+  &__box {
+  }
+  &__head {
+    padding: 1.6rem 3.7rem;
+    border-bottom: 1px solid var(--colorGrayBland);
+    @include flexItem(flex, space-between, center);
+    & span {
+      @include fontText(1.6rem, 400, 0, var(--colorBlack));
+      text-transform: uppercase;
+    }
+    & svg {
+      @include fontText(2rem, 400, 0, var(--colorTitle));
+      cursor: pointer;
+    }
+  }
+  &__content {
+    padding: 3.7rem;
+  }
+  &__control {
+    width: 100%;
+    margin-bottom: 3.5rem;
+    font-size: 1.4rem;
+
+    & img {
+      border-radius: 0.8rem;
+    }
+
+    & label {
+      @include fontText(1.6rem, 400, 0, #343747);
+      & span {
+        color: var(--colorButtonRed);
+      }
+    }
+
+    & input {
+      @include fontText(1.4rem, 400, 1rem 2rem, var(--colorGray));
+    }
+  }
+  &__action {
+    @include flexItem(flex, center, center);
+    padding-top: 1.5rem;
+
+    & button {
+      @include fontText(1.6rem, 500, 0.5rem 6rem, var(--colorBlue));
+      border-radius: 2rem !important;
+      margin-right: 2rem;
+    }
+    & .css-sn1eoh-MuiButtonBase-root-MuiButton-root {
+      color: var(--colorWhite) !important;
+      background-color: var(--colorBlue) !important;
+    }
+  }
+}
+
+.thumbnail-pre {
+  width: 10rem;
+  height: 10rem;
+}
+
+// custom css input
+.css-md26zr-MuiInputBase-root-MuiOutlinedInput-root {
+  height: 100%;
+  align-items: start !important;
+}
+
+.css-1t1j96h-MuiPaper-root-MuiDialog-paper {
+  max-width: 67.4rem !important;
+}
+
+.css-1wc848c-MuiFormHelperText-root {
+  font-size: 1.2rem !important;
+  margin: 0.3rem 0 0 0 !important;
+}
+
+.css-14el2xx-placeholder {
+  font-size: 1.4rem;
+  color: var(--colorGray);
+  padding-left: 1rem;
+}
+
+.css-6j8wv5-Input input,
+.css-qc6sy-singleValue {
+  padding-left: 1rem !important;
+}
+
+// custom select
+.select-error .css-1s2u09g-control {
+  border-color: var(--colorError);
+}
+
+.select-error .css-1pahdxg-control,
+.select-error .css-1s2u09g-control:hover {
+  border-color: var(--colorError);
+  box-shadow: 0 0 0 1px var(--colorError);
+}

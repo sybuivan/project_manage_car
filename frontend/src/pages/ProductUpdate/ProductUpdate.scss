@@ -1,0 +1,51 @@
+@import '../../assets/css/mixin.scss';
+
+.product-update {
+  &__wrapper {
+    margin-top: 4.7rem;
+  }
+
+  &-content {
+    border-radius: 2rem;
+    background-color: var(--colorWhite);
+    padding: 3.8rem;
+  }
+
+  &-title {
+    @include fontText(1.8rem, 600, 0 0 3.5rem 0, var(--colorBlack));
+  }
+
+  &__action {
+    padding-top: 3.1rem;
+    &-button {
+      width: 16rem;
+      height: 4.8rem;
+      border-radius: 0.4rem;
+      @include fontText(1.4rem, 500, 0, var(--colorWhite));
+      background-color: var(--colorBlue);
+      border: none;
+      cursor: pointer;
+      &.close {
+        border: 1px solid var(--colorBlue);
+        background-color: var(--colorWhite);
+        margin-right: 3.7rem;
+        color: var(--colorBlue);
+      }
+    }
+  }
+}
+
+.thumbnail-pre-update {
+  width: 30rem;
+  height: 20rem;
+}
+
+img.thumbnail-pre__edit {
+  width: 40rem;
+  height: 20rem;
+}
+
+.css-8ewcdo-MuiInputBase-root-MuiOutlinedInput-root {
+  height: 100%;
+  font-size: 1.4rem!important;
+}

@@ -1,0 +1,63 @@
+@import '../../assets/css/mixin.scss';
+.product-list {
+  &__head-space {
+    @include flexItem(flex, space-between, center);
+    @include tablet {
+      display: block;
+    }
+  }
+  &__head-end {
+    @include flexItem(flex, flex-end, center);
+  }
+
+  &-content {
+    padding-top: 4.6rem;
+    border-radius: 2rem;
+    background-color: var(--colorWhite);
+  }
+
+  &-pagination {
+    @include flexItem(flex, center, center);
+    padding-bottom: 5rem;
+  }
+  &__head-button {
+    &--none {
+      display: none;
+    }
+    & button {
+      @include fontText(1.4rem, 400, 1rem 2rem, var(--colorBlue) !important);
+      border: 2px solid var(--colorButtonPrimary);
+      border-radius: 0.6rem;
+      background-color: transparent;
+      @include tablet {
+        margin-bottom: 2rem;
+      }
+
+      &:hover {
+        border: 2px solid var(--colorButtonPrimary);
+        background-color: transparent;
+      }
+    }
+  }
+  &-empty {
+    width: 40rem;
+    margin: auto;
+    padding-bottom: 2rem;
+    & img {
+      width: 100%;
+    }
+    & h2 {
+      text-align: center;
+      font-size: 2rem;
+    }
+  }
+
+  &__btn {
+    cursor: pointer;
+  }
+}
+
+.css-1slz293-MuiSkeleton-root {
+  margin-bottom: 4.9rem;
+  border-radius: 0.8rem;
+}

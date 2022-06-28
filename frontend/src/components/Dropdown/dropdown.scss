@@ -1,0 +1,45 @@
+@import '../../assets/css/mixin.scss';
+
+.dropdown {
+  &:last-child {
+    border-bottom: none;
+  }
+  border-bottom: 2px solid var(--colorGrayBland);
+
+  padding: 3.3rem 3.2rem;
+  user-select: none;
+  z-index: 2;
+  overflow: hidden;
+  &__title {
+    @include fontText(1.6rem, 400, 1.2rem 0, var(--colorBlack));
+    @include flexItem(flex, space-between, center);
+    cursor: pointer;
+  }
+  &__option {
+    transform: translateY(-24rem);
+    transition: transform 0.3s ease;
+    display: none;
+    height: 0;
+    &.active {
+      transform: translateY(0);
+      height: auto;
+      display: block;
+      
+    }
+  }
+  &__list {
+    &-item {
+      @include fontText(1.6rem, 400, 1.2rem 0, var(--colorBlack));
+      cursor: pointer;
+      &.active {
+        color: var(--colorBlue);
+        font-weight: 700;
+      }
+
+      &:hover {
+        transition: all 0.2s ease;
+        color: var(--colorBlue);
+      }
+    }
+  }
+}

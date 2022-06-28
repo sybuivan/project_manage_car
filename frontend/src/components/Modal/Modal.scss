@@ -1,0 +1,57 @@
+@import '../../assets/css/mixin.scss';
+
+.modal-content {
+  width: calc(56.4rem - 2.7 * 2rem);
+  height: 32.8rem;
+  padding: 2.7rem;
+  border-radius: 0.8rem;
+  &__head {
+    @include flexItem(flex, flex-end, center);
+    padding-bottom: 2.9rem;
+    & svg {
+      font-size: 2rem;
+      cursor: pointer;
+    }
+  }
+
+  &__title-delete {
+    @include fontText(1.6rem, 400, 0, var(--colorText));
+    text-align: center;
+    line-height: 2.4rem;
+  }
+  &__title-warning {
+    color: var(--colorButtonRed);
+  }
+  &__box {
+    margin: auto;
+    width: fit-content;
+    &-image {
+      padding-bottom: 2.6rem;
+      position: relative;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+    &-title {
+      @include fontText(2.4rem, 700, 0, var(--colorText));
+    }
+  }
+
+  &__action {
+    @include flexItem(flex, space-between, center);
+    @include fontText(1.6rem, 500, 4.8rem 0 0 0, var(--colorGray));
+    &-button {
+      padding: 1rem 6.8rem;
+      border-radius: 1.6rem;
+      border: 1px solid var(--colorGray);
+      margin-right: 2.6rem;
+      background-color: var(--colorWhite);
+      cursor: pointer;
+
+      &.delete {
+        background-color: var(--colorButtonRed);
+        border: none;
+        color: var(--colorWhite);
+      }
+    }
+  }
+}

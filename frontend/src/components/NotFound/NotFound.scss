@@ -1,0 +1,33 @@
+.not-found {
+  &-wrapper {
+    display: flex;
+    justify-content: center;
+  }
+  &__title {
+    color: red;
+    font-size: 2rem;
+    text-align: center;
+  }
+  & p,
+  & a {
+    text-align: center;
+    font-size: 2rem;
+  }
+
+  & a {
+    padding: 1rem;
+    border-radius: 0.8rem;
+    background-color: var(--colorBlue);
+    color: var(--colorWhite);
+  }
+
+  &__link {
+    display: flex;
+    justify-content: center;
+    padding: 1rem 0;
+  }
+
+  &__image {
+    height: 40rem;
+  }
+}

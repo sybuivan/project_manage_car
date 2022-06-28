@@ -1,0 +1,73 @@
+@import '../../../../assets/css/mixin.scss';
+
+.update-image {
+  width: 100%;
+  height: 11.8rem;
+  margin-bottom: 3.8rem;
+
+  &__wrapper {
+    box-shadow: var(--boxShawdow);
+    border-radius: 0.8rem;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    position: relative;
+  }
+  &__overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    background-color: rgba(0, 0, 0, 0.1);
+    opacity: 0;
+  }
+
+  &__wrapper:hover &__action,
+  &__wrapper:hover &__overlay {
+    opacity: 1;
+    transition: opacity 0.3s ease;
+  }
+
+  &__thumbnail {
+    width: 100%;
+    height: 100%;
+  }
+
+  &__add {
+    width: 7.4rem;
+    height: 7.4rem;
+    box-shadow: var(--boxShawdow);
+    border-radius: 0.8rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+  }
+
+  .css-1foa3kv-MuiFormLabel-root-MuiInputLabel-root {
+    transform-origin: center;
+    cursor: pointer;
+  }
+
+  &__action {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    &-button:first-child {
+      margin-bottom: 0.8rem;
+    }
+
+    &-button {
+      border: 1px solid rgba(255, 255, 255, 0.5);
+      border-radius: 0.8rem;
+      background: rgba(0, 0, 0, 0.8);
+      width: 10rem;
+      color: #fff !important;
+      padding: 1rem 2rem;
+      @include fontText(1.4rem, 400, 1rem 2rem, var(--colorWhite));
+      cursor: pointer;
+    }
+  }
+}

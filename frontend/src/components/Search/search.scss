@@ -1,0 +1,27 @@
+@import '../../assets/css/mixin.scss';
+.search {
+  width: 45.5rem;
+  height: 4.8rem;
+
+  background-color: var(--colorWhite);
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  border-radius: 0.8rem;
+
+  &-box {
+    @include flexItem(flex, flex-start, center);
+    height: 100%;
+  }
+
+  &-icon {
+    padding: 0 1.4rem 0 2.2rem;
+    font-size: 2rem;
+  }
+  &-input {
+    color: #62677a;
+    outline: none;
+    border: none;
+    width: 100%;
+    padding: 1.2rem 0;
+    font-size: 1.6rem;
+  }
+}

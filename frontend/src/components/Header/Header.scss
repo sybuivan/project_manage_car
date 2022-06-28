@@ -1,0 +1,60 @@
+@import '../../assets/css/mixin.scss';
+.header {
+  height: 6.4rem;
+  background-color: var(--colorBlue);
+  position: fixed;
+  left: 0;
+  right: 0;
+  z-index: 1;
+  &-box {
+    height: 100%;
+    @include flexItem(flex, flex-start, center);
+    padding-left: 7rem;
+  }
+
+  &-logo {
+    height: 100%;
+    padding-right: 15rem;
+    &__link {
+      display: block;
+      height: 100%;
+      width: 15rem;
+    }
+
+    &__box {
+      @include flexItem(flex, space-between, center);
+      height: 100%;
+    }
+    &__image {
+      height: 3.4rem;
+    }
+
+    &__name {
+      font-size: 4.8rem;
+      font-weight: 700;
+      color: var(--colorWhite);
+    }
+  }
+
+  &-nav {
+    &__list {
+      @include flexItem(flex, space-between, center);
+    }
+
+    &__item {
+      & a {
+        font-size: 1.8rem;
+        font-weight: 400;
+
+        padding-right: 3rem;
+        text-transform: uppercase;
+        color: var(--colorWhite);
+        opacity: 0.7;
+        &.active {
+          opacity: 1;
+          font-weight: 700;
+        }
+      }
+    }
+  }
+}

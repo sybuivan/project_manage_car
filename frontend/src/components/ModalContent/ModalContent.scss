@@ -1,0 +1,29 @@
+@import '../../assets/css/mixin.scss';
+
+.modal-content {
+  width: calc(56.4rem - 2.7 * 2rem);
+  height: 32.8rem;
+  padding: 2.7rem;
+  border-radius: 0.8rem;
+  &__head {
+    @include flexItem(flex, flex-end, center);
+    padding-bottom: 2.9rem;
+    & svg {
+      font-size: 2rem;
+      cursor: pointer;
+    }
+  }
+  &__box {
+    margin: auto;
+    width: fit-content;
+    &-image {
+      padding-bottom: 2.6rem;
+      position: relative;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+    &-title {
+      @include fontText(2.4rem, 700, 0, var(--colorText));
+    }
+  }
+}
